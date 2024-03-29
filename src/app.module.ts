@@ -2,6 +2,8 @@ import { Module } from '@nestjs/common';
 import { UserModule } from './user/user.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import * as dotenv from 'dotenv';
+import { EmailService } from './email/email.service';
+import { EmailModule } from './email/email.module';
 
 dotenv.config();
 @Module({
@@ -14,7 +16,7 @@ dotenv.config();
     UserModule,
   ],
   controllers: [],
-  providers: [],
+  providers: [EmailService],
 })
 export class AppModule {
   constructor() {
