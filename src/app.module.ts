@@ -4,6 +4,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import * as dotenv from 'dotenv';
 import { EmailService } from './email/email.service';
 import { EmailModule } from './email/email.module';
+import { SocketModule } from './socket/socket.module';
 
 dotenv.config();
 @Module({
@@ -14,6 +15,7 @@ dotenv.config();
       useUnifiedTopology: true,
     }),
     UserModule,
+    SocketModule,
   ],
   controllers: [],
   providers: [EmailService],
