@@ -13,7 +13,6 @@ import * as dotenv from 'dotenv';
 import { ForgotPasswordDto } from './dto/forgotPassword.dto';
 import * as crypto from 'crypto';
 import { ForgotPassVerifyCodeDto } from './dto/forgotPassVerifyCode.dto';
-import { promises } from 'fs';
 import { CreatePasswordDto } from './dto/CreatePassword.dto';
 
 dotenv.config();
