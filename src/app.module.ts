@@ -9,11 +9,7 @@ import { SocketModule } from './socket/socket.module';
 dotenv.config();
 @Module({
   imports: [
-    MongooseModule.forRoot(process.env.DB_URL, {
-      // @ts-ignore
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }),
+    MongooseModule.forRoot(process.env.DB_URL, {}),
     UserModule,
     SocketModule,
   ],

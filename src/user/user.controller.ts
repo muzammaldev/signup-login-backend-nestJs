@@ -22,8 +22,6 @@ import { CreatePasswordDto } from './dto/CreatePassword.dto';
 @Controller('user')
 export class UserController {
   constructor(
-    @InjectModel(User.name)
-    private readonly userModel: Model<userDocument>,
     private readonly userservice: UserService,
     private readonly emailService: EmailService,
   ) {}
